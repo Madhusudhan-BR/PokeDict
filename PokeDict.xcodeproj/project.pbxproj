@@ -14,6 +14,7 @@
 		9B3B80031EDCF90D0003E521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B80011EDCF90D0003E521 /* LaunchScreen.storyboard */; };
 		9B3B800E1EDCF90D0003E521 /* PokeDictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B800D1EDCF90D0003E521 /* PokeDictTests.swift */; };
 		9B3B80191EDCF90D0003E521 /* PokeDictUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B80181EDCF90D0003E521 /* PokeDictUITests.swift */; };
+		9B9A44A21EDD0A1B004890E2 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44A11EDD0A1B004890E2 /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9B3B80141EDCF90D0003E521 /* PokeDictUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeDictUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3B80181EDCF90D0003E521 /* PokeDictUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDictUITests.swift; sourceTree = "<group>"; };
 		9B3B801A1EDCF90D0003E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9A44A11EDD0A1B004890E2 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9B3B7FFC1EDCF90D0003E521 /* Main.storyboard */,
 				9B3B7FFF1EDCF90D0003E521 /* Assets.xcassets */,
 				9B3B80011EDCF90D0003E521 /* LaunchScreen.storyboard */,
+				9B9A44A11EDD0A1B004890E2 /* pokemon.csv */,
 				9B3B80041EDCF90D0003E521 /* Info.plist */,
 			);
 			path = PokeDict;
@@ -237,6 +240,7 @@
 			files = (
 				9B3B80031EDCF90D0003E521 /* LaunchScreen.storyboard in Resources */,
 				9B3B80001EDCF90D0003E521 /* Assets.xcassets in Resources */,
+				9B9A44A21EDD0A1B004890E2 /* pokemon.csv in Resources */,
 				9B3B7FFE1EDCF90D0003E521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhusudhanbr.PokeDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,6 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhusudhanbr.PokeDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -514,6 +520,7 @@
 				9B3B801F1EDCF90D0003E521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B3B80201EDCF90D0003E521 /* Build configuration list for PBXNativeTarget "PokeDictTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				9B3B80221EDCF90D0003E521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B3B80231EDCF90D0003E521 /* Build configuration list for PBXNativeTarget "PokeDictUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				9B3B80251EDCF90D0003E521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
