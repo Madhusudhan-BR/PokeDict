@@ -140,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="pokeCollection" destination="pdu-PW-J5v" id="FeK-aL-yNX"/>
+                        <outlet property="pokeSearchBar" destination="FhI-ac-eb9" id="sb4-1C-MqE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
