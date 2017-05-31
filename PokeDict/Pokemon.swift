@@ -9,8 +9,9 @@
 import Foundation
 
 class Pokemon {
-    fileprivate var _name:String!
-    fileprivate var _id:String!
+    private var _name:String!
+    private var _id:String!
+    
     
     var name: String{
         return _name

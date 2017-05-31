@@ -73,9 +73,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let poke : Pokemon!
+        if searchMode{
+             poke = filteredPokeArray[indexPath.row]
+            
+        }
+        else {
+            poke = pokeArray[indexPath.row]
+        }
         
+        performSegue(withIdentifier: "DetailViewController", sender: poke)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "DetailViewController"{
+            if let DetailVC = segue.destination as? DetailViewController {
+                if let poke = sender as? Pokemon {
+                    DetailVC.pokemon = poke
+                }
+            }
+        }
+    }
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

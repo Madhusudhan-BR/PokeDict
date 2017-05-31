@@ -21,6 +21,7 @@
 		9B9A44AD1EDDF0FE004890E2 /* PokemonFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44AC1EDDF0FE004890E2 /* PokemonFont.ttf */; };
 		9B9A44AF1EDDF2BF004890E2 /* music-player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44AE1EDDF2BF004890E2 /* music-player.png */; };
 		9B9A44B11EDDF479004890E2 /* pokeMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44B01EDDF479004890E2 /* pokeMusic.mp3 */; };
+		9B9A44B31EDE4149004890E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A44B21EDE4149004890E2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9B9A44AC1EDDF0FE004890E2 /* PokemonFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonFont.ttf; sourceTree = "<group>"; };
 		9B9A44AE1EDDF2BF004890E2 /* music-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-player.png"; sourceTree = "<group>"; };
 		9B9A44B01EDDF479004890E2 /* pokeMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pokeMusic.mp3; sourceTree = "<group>"; };
+		9B9A44B21EDE4149004890E2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				9B9A44AE1EDDF2BF004890E2 /* music-player.png */,
 				9B9A44B01EDDF479004890E2 /* pokeMusic.mp3 */,
 				9B3B7FFA1EDCF90D0003E521 /* ViewController.swift */,
+				9B9A44B21EDE4149004890E2 /* DetailViewController.swift */,
 				9B3B7FFC1EDCF90D0003E521 /* Main.storyboard */,
 				9B3B7FFF1EDCF90D0003E521 /* Assets.xcassets */,
 				9B3B80011EDCF90D0003E521 /* LaunchScreen.storyboard */,
@@ -309,6 +312,7 @@
 				9B3B7FFB1EDCF90D0003E521 /* ViewController.swift in Sources */,
 				9B9A44A91EDD1942004890E2 /* PokeCollectionViewCell.swift in Sources */,
 				9B3B7FF91EDCF90D0003E521 /* AppDelegate.swift in Sources */,
+				9B9A44B31EDE4149004890E2 /* DetailViewController.swift in Sources */,
 				9B9A44A61EDD0B9A004890E2 /* Pokemon.swift in Sources */,
 				9B9A44AB1EDDE0DB004890E2 /* csv.swift in Sources */,
 			);
