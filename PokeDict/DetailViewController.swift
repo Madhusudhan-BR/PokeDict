@@ -27,7 +27,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateView()
+        pokemon.downloadJSON {
+            
+            
+            print("inside download JSON")
+            self.updateView()
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -35,10 +40,27 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
     func updateView(){
         pokemonName.text = pokemon.name
+        pokemonID.text = pokemon.id
+        pokemonImage.image = UIImage(named: pokemon.id)
+        pokemonAttack.text = pokemon.baseAttack
+        pokemonDefense.text = pokemon.defence
+        pokemonHeight.text = pokemon.height
+        pokemonWeight.text = pokemon.weight
+        pokemonEvolutionImage1.image = UIImage(named: pokemon.id)
+        pokemonType.text = pokemon.type
+        pokemonDesc.text = pokemon.desc
+        if pokemon.nextEvolution == "" {
+            pokemonEvolutionLabel.text = "NO further Evolutions"
+            pokemonEvolutionImage2.isHidden = true
+        } else {
+        pokemonEvolutionLabel.text = pokemon.nextEvolution
+        }
+        pokemonEvolutionImage2.image = UIImage(named: pokemon.pokemonEvolutionImageString)
     }
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

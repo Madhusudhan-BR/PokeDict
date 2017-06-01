@@ -24,6 +24,7 @@
 		9B9A44AF1EDDF2BF004890E2 /* music-player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44AE1EDDF2BF004890E2 /* music-player.png */; };
 		9B9A44B11EDDF479004890E2 /* pokeMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9A44B01EDDF479004890E2 /* pokeMusic.mp3 */; };
 		9B9A44B31EDE4149004890E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A44B21EDE4149004890E2 /* DetailViewController.swift */; };
+		9B9A44B51EDE8E37004890E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A44B41EDE8E37004890E2 /* Constants.swift */; };
 		E409F426105FED90C65FD464 /* Pods_PokeDict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D608975EC682B3CA1FE0B89C /* Pods_PokeDict.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		9B9A44AE1EDDF2BF004890E2 /* music-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "music-player.png"; sourceTree = "<group>"; };
 		9B9A44B01EDDF479004890E2 /* pokeMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pokeMusic.mp3; sourceTree = "<group>"; };
 		9B9A44B21EDE4149004890E2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9B9A44B41EDE8E37004890E2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B118E0B183B3CDB86BE750C3 /* Pods_PokeDictUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeDictUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5CD03A11FB35BA4A85087F /* Pods_PokeDictTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeDictTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D608975EC682B3CA1FE0B89C /* Pods_PokeDict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeDict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 			children = (
 				9B9A44AA1EDDE0DB004890E2 /* csv.swift */,
 				9B9A44A51EDD0B9A004890E2 /* Pokemon.swift */,
+				9B9A44B41EDE8E37004890E2 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				9B9A44A91EDD1942004890E2 /* PokeCollectionViewCell.swift in Sources */,
 				9B3B7FF91EDCF90D0003E521 /* AppDelegate.swift in Sources */,
 				9B9A44B31EDE4149004890E2 /* DetailViewController.swift in Sources */,
+				9B9A44B51EDE8E37004890E2 /* Constants.swift in Sources */,
 				9B9A44A61EDD0B9A004890E2 /* Pokemon.swift in Sources */,
 				9B9A44AB1EDDE0DB004890E2 /* csv.swift in Sources */,
 			);
