@@ -21,6 +21,70 @@ class Pokemon {
     private var _nextEvolution:String! 
     private var _pokemonURL:String!
     private var _pokemonEvolutionImageString:String!
+    private var _move1name:String!
+    private var _move2name:String!
+    private var _move3name:String!
+    private var _move4name:String!
+    private var _move1Desc:String!
+    private var _move2Desc:String!
+    private var _move3Desc:String!
+    private var _move4Desc:String!
+    
+    var move4name : String {
+        if _move4name == nil {
+            _move4name = ""
+        }
+        return _move4name
+    }
+    
+    var move3name : String {
+        if _move3name == nil {
+            _move3name = ""
+        }
+        return _move3name
+    }
+    
+    var move2name : String {
+        if _move2name == nil {
+            _move2name = ""
+        }
+        return _move2name
+    }
+    
+    var move1name : String {
+        if _move1name == nil {
+            _move1name = ""
+        }
+        return _move1name
+    }
+    
+    var move1Desc:String{
+        if _move1Desc == nil{
+            _move1Desc = ""
+        }
+        return _move1Desc
+    }
+    
+    var move2Desc:String{
+        if _move2Desc == nil{
+            _move2Desc = ""
+        }
+        return _move2Desc
+    }
+    
+    var move3Desc:String{
+        if _move3Desc == nil{
+            _move3Desc = ""
+        }
+        return _move3Desc
+    }
+    
+    var move4Desc:String{
+        if _move4Desc == nil{
+            _move4Desc = ""
+        }
+        return _move4Desc
+    }
     
     var pokemonEvolutionImageString: String {
         if _pokemonEvolutionImageString == nil {
@@ -147,8 +211,9 @@ class Pokemon {
                             print(response.result.value)
                             if let descriptionResponse = response.result.value as? Dictionary<String,AnyObject> {
                                 let des = descriptionResponse["description"] as! String
-                                des.replacingOccurrences(of: "POKMON", with: "pokemon")
-                                self._desc = des
+                               self._desc  =  des.replacingOccurrences(of: "POKMON", with: "pokemon")
+                                //des.replacingOccurrences(of: "POKMONs", with: "pokemons")
+                                
                                 print("This is the description received!!")
                                 print(self.desc)
                             }
@@ -189,6 +254,97 @@ class Pokemon {
                         })
                     }
                 
+                    if let  movesDict = dict["moves"] as? [Dictionary<String,AnyObject>], movesDict.count > 0 {
+                        self._move1name = ""
+                        self._move2name = ""
+                        self._move3name = ""
+                        self._move4name = ""
+                        self._move4Desc = ""
+                        self._move3Desc = ""
+                        self._move2Desc = ""
+                        self._move1Desc = ""
+                        
+                        self._move1name = movesDict[0]["name"] as! String
+                        self._move2name = movesDict[1]["name"] as! String
+                        self._move3name = movesDict[2]["name"] as! String
+                        self._move4name = movesDict[3]["name"] as! String
+                        
+                        print("These are  the moves")
+                        print(self.move1name)
+                        print(self.move2name)
+                        print(self.move3name)
+                        print(self.move4name)
+                        
+                        if let movesuri1 = movesDict[0]["resource_uri"] as? String {
+                            let fullmoves1uri = descriptionURL + movesuri1
+                            
+                            Alamofire.request(fullmoves1uri).responseJSON(completionHandler: { (response) in
+                                print("this is one of the moves")
+                                print(response.result.value)
+                                
+                                if let move1Dict = response.result.value as? Dictionary<String,AnyObject> {
+                                    if let move1 = move1Dict["description"] as? String {
+                                        self._move1Desc = move1
+                                    }
+                                }
+                                complete()
+                            })
+                            
+                        }
+                        
+                        if let movesuri2 = movesDict[1]["resource_uri"] as? String {
+                            let fullmoves2uri = descriptionURL + movesuri2
+                            
+                            Alamofire.request(fullmoves2uri).responseJSON(completionHandler: { (response) in
+                                print("this is one of the moves")
+                                print(response.result.value)
+                                
+                                if let move2Dict = response.result.value as? Dictionary<String,AnyObject> {
+                                    if let move2 = move2Dict["description"] as? String {
+                                        self._move2Desc = move2
+                                    }
+                                }
+                                complete()
+                            })
+                            
+                        }
+                        
+                        if let movesuri3 = movesDict[2]["resource_uri"] as? String {
+                            let fullmoves3uri = descriptionURL + movesuri3
+                            
+                            Alamofire.request(fullmoves3uri).responseJSON(completionHandler: { (response) in
+                                print("this is one of the moves")
+                                print(response.result.value)
+                                
+                                if let move3Dict = response.result.value as? Dictionary<String,AnyObject> {
+                                    if let move3 = move3Dict["description"] as? String {
+                                        self._move3Desc = move3
+                                    }
+                                }
+                                complete()
+                            })
+                            
+                        }
+                        
+                        if let movesuri4 = movesDict[3]["resource_uri"] as? String {
+                            let fullmoves4uri = descriptionURL + movesuri4
+                            
+                            Alamofire.request(fullmoves4uri).responseJSON(completionHandler: { (response) in
+                                print("this is one of the moves")
+                                print(response.result.value)
+                                
+                                if let move4Dict = response.result.value as? Dictionary<String,AnyObject> {
+                                    if let move4 = move4Dict["description"] as? String {
+                                        self._move4Desc = move4
+                                    }
+                                }
+                                 complete()
+                            })
+                           
+                            
+                        }
+                        
+                    }
             }
             
            complete()

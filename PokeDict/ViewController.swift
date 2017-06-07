@@ -30,7 +30,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func initMusic(){
-        let musicPath = Bundle.main.path(forResource: "pokeMusic", ofType: "mp3")!
+        let musicPath = Bundle.main.path(forResource: "PimPoy", ofType: "wav")!
         
         do{
             musicPlayer = try AVAudioPlayer(contentsOf: URL(string: musicPath)!)

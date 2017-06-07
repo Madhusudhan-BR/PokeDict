@@ -17,7 +17,7 @@ class PokeCollectionViewCell: UICollectionViewCell {
     
     func updateCell(_ pokemon_: Pokemon){
         self.pokemon = pokemon_
-        thumbImg.image = UIImage(named: "\(pokemon_.id)")
+        thumbImg.image = UIImage(named: "dragon")
         thumbLabel.text = pokemon_.name.capitalized
         
     }

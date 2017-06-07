@@ -24,6 +24,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pokemonEvolutionLabel: UILabel!
     @IBOutlet weak var pokemonEvolutionImage2: UIImageView!
     @IBOutlet weak var pokemonEvolutionImage1: UIImageView!
+    @IBOutlet weak var move2: UILabel!
+    @IBOutlet weak var move1: UILabel!
+    @IBOutlet weak var move4: UILabel!
+    @IBOutlet weak var move3: UILabel!
+    
+    @IBOutlet weak var movesView: UIView!
+    @IBOutlet weak var moveDesc1: UILabel!
+    
+    @IBOutlet weak var moveDesc2: UILabel!
+    
+    @IBOutlet weak var moveDesc3: UILabel!
+    
+    
+    @IBOutlet weak var moveDesc4: UILabel!
+    
+    @IBOutlet weak var segmentController: UISegmentedControl!
+    
+    @IBAction func segmentAction(_ sender: Any) {
+        if segmentController.selectedSegmentIndex == 0 {
+            movesView.isHidden = true
+        }
+        else
+        {
+            movesView.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,21 +73,29 @@ class DetailViewController: UIViewController {
     func updateView(){
         pokemonName.text = pokemon.name
         pokemonID.text = pokemon.id
-        pokemonImage.image = UIImage(named: pokemon.id)
+        pokemonImage.image = UIImage(named: "dragon")
         pokemonAttack.text = pokemon.baseAttack
         pokemonDefense.text = pokemon.defence
         pokemonHeight.text = pokemon.height
         pokemonWeight.text = pokemon.weight
-        pokemonEvolutionImage1.image = UIImage(named: pokemon.id)
+        pokemonEvolutionImage1.image = UIImage(named: "dragon")
         pokemonType.text = pokemon.type
         pokemonDesc.text = pokemon.desc
         if pokemon.nextEvolution == "" {
-            pokemonEvolutionLabel.text = "NO further Evolutions"
+            pokemonEvolutionLabel.text = "No further Evolutions"
             pokemonEvolutionImage2.isHidden = true
         } else {
         pokemonEvolutionLabel.text = pokemon.nextEvolution
         }
-        pokemonEvolutionImage2.image = UIImage(named: pokemon.pokemonEvolutionImageString)
+        pokemonEvolutionImage2.image = UIImage(named: "dragon")
+        move1.text = pokemon.move1name
+        move2.text = pokemon.move2name
+        move3.text = pokemon.move3name
+        move4.text = pokemon.move4name
+        moveDesc1.text = pokemon.move1Desc
+        moveDesc2.text = pokemon.move2Desc
+        moveDesc3.text = pokemon.move3Desc
+        moveDesc4.text = pokemon.move4Desc
     }
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
